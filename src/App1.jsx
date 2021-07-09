@@ -50,7 +50,7 @@ function handle(e)
         <mb-input label="Allergic To" path="allergy"></mb-input>
         <mb-input label="Aadhar No." path="identifier[0].value"></mb-input>
         <mb-input path="telecome[0].value" label="Phone No."></mb-input>
-        <mb-input path="telecome[0].value" label="Email"></mb-input>
+       
         <div style={{display:"flex"}} >
         <mb-buttons label="Immunization" type="code" path="Immunization" data={{
             code: 'dose1',
