@@ -15,6 +15,7 @@ import object from './object'
   }
   function app(){
     const[val,setValue]=useState("");
+
   }
 function handle(e)
 {
@@ -65,7 +66,7 @@ function handle(e)
         </mb-buttons></div>
         
         <mb-submit>
-           <sl-button onClick={Click} onclick={app}  type="info">Submit</sl-button>
+           <sl-button onClick={Click} type="info">Submit</sl-button>
          </mb-submit>
       </mb-fhir-form>
     </div>
