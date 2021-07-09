@@ -4,22 +4,24 @@ import Nav from './nav'
 import form from './form'
 import list from './list'
 import home from './home'
+import object from './object'
+
+
   function App1() {
     const [count, setCount] = useState(0)
-
     function Click()
   {
     console.log('Hello');
   }
   function app(){
     const[val,setValue]=useState("");
-  
+  }
 function handle(e)
 {
   const a=e.target.value;
-  servalaue(a);
-}  }
-
+  setValue(a);
+}
+ 
   return (
     
     <div className="App1">
@@ -69,5 +71,6 @@ function handle(e)
     </div>
   )
 }
+
 
 export default App1
