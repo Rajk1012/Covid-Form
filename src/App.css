@@ -4,13 +4,30 @@
 
 ul{
   background-color: Black;
-  color:whitesmoke;
   font-size: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 20px;
   padding: 20px;
-  overflow: hidden;
   justify-content: space-around;
   display: flex;
-  list-style-type: disc;
+}
+li{
+  color:whitesmoke;
+   text-align: right;
+  padding: 16px;
+ text-decoration: none;
+ list-style: none;
+}
+.link{
+text-decoration: none;
+color: whitesmoke;
+}
+.Style1{
+ height: auto;
+ width: 80%;
+margin-left: 10%;
+}
+.Style2{
+  text-align: center;
+  font-size: 2xl;
 }

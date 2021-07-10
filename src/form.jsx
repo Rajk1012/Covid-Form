@@ -20,10 +20,10 @@ function handle(e)
   setValue(a);
 }
  
-  return (
-    
+  return (    
     <div className="Form">
-      <h1 class="text-2xl font-semibold">Patient Registration Form</h1>
+      <h1 class="Style2">Patient Registration Form</h1>
+      <div class="Style1" >
       <mb-form class="flex flex-col gap-5">
         <mb-context path="resource" value="patient"></mb-context>
         <mb-input path="name[0].given" label="Name"></mb-input>
@@ -66,6 +66,7 @@ function handle(e)
            <sl-button onClick={Click} type="info">Submit</sl-button>
          </mb-submit>
       </mb-form>
+      </div>
     </div>
   )
 }
