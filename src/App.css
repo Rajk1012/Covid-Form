@@ -2,18 +2,15 @@
   text-align: center;
 }
 
-Nav{
-  display: flex;
+ul{
+  background-color: Black;
+  color:whitesmoke;
+  font-size: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
   justify-content: space-around;
-  align-items: center;
-  min-height: 10vh;
-  background: rgb(red, green, blue) ;
-  color: white;
-}
-.Nav-links{
- width: 40%;
- display:flex;
- justify-content: space-around;
-  align-items: center;
-  list-style: none;
+  display: flex;
+  list-style-type: disc;
 }

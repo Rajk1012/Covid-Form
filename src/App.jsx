@@ -1,19 +1,26 @@
 import React from 'react'
 import list from './list'
-import home from './home'
-import form from './form'
-import { BrowserRouter,Route,Switch} from 'react-router-dom'
-import App1 from './App1'
+import { BrowserRouter,Route,Switch,Link} from 'react-router-dom'
+import Form from './form'
+import './App.css'
 
 function App(){
   return(
     <>
-    <BrowserRouter>     
+    <BrowserRouter> 
+    <nav>
+          <ul>
+            <li>
+              <Link to="/form">Registration Form</Link>
+              </li>
+              <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </nav>
       <Switch>
-        <Route  path="/form" component={form} />
-        <Route  path="/list" component={list} />
-        <Route  path="/home"  component={home} />
-        <Route path="/" component={App1}/>
+        <Route  path="/form" component={Form} />
+        <Route  path="/" component={list} />
       </Switch>             
     </BrowserRouter>
    </>
