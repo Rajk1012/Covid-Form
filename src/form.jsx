@@ -9,17 +9,7 @@ import object from './object'
   {
     const a=e.detail;
     console.log(a.data);
-  }
-  function app(){
-    const[val,setValue]=useState("");
-
-  }
-function handle(e)
-{
-  const a=e.target.value;
-  setValue(a);
-}
- 
+  } 
   return (    
     <div className="Form">
       <h1 class="Style2">Patient Registration Form</h1>
