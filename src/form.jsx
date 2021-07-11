@@ -60,6 +60,4 @@ import object from './object'
     </div>
   )
 }
-
-
 export default Form
