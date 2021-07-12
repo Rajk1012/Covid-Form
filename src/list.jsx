@@ -11,7 +11,7 @@ function list(){
     return(
 
         <div >
-         <h1 class="text-2xl">Patients</h1>
+         <h1 class="text-2xl">Patient List</h1>
               
          <sl-button onClick={click} type="primary">
              <Link to="/home" class="link">Back</Link>

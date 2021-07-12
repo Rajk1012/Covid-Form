@@ -15,7 +15,7 @@ function App(){
               <Link to="/form" class="link">Registration Form</Link>
               </li>
             <li>
-              <Link to="/list" class="link">Patient List</Link>
+              <Link to="/list" class="link">Patients</Link>
             </li>
             <li>
               <Link to="/home" class="link">Home</Link>
@@ -26,6 +26,7 @@ function App(){
         <Route  path="/form" component={Form} />
         <Route path="/home" component={home}/>
         <Route path="/list" component={list}/>
+        <Route path="" component={home}/>
       </Switch>             
     </BrowserRouter>
    </>
