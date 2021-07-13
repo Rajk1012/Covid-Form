@@ -13,17 +13,17 @@ import { Button, Form, } from 'react-bootstrap'
 <div className="form">
     <h1 class="Style2">Registration Form</h1>
   <Form class="style1">
-      <Form.Group >
-          <Form.Label>Name:</Form.Label>
-          <Form.Control name="name" type="text" placeholder="Enter name" />
-      </Form.Group>
+    <Form.Group controlId="name">
+        <Form.Label>Name</Form.Label>
+        <Form.Control name="name" type="text" placeholder="Enter Name" />
+    </Form.Group>
 
-      <Form.Group >
-          <Form.Label>Age:</Form.Label>
-          <Form.Control name="age" type="number" placeholder="Enter Age" />
-      </Form.Group>
+    <Form.Group controlId="age">
+        <Form.Label>Age:</Form.Label>
+        <Form.Control name="age" type="number" placeholder="Enter Age" />
+    </Form.Group>
 
-      <label for="gendre">Gender:</label>
+      <label htmlFor="gender">Gender:</label>
       <select name="gender" id="gender">
           <option value="male" >Male</option>
           <option value="female" >Female</option>
@@ -43,7 +43,8 @@ import { Button, Form, } from 'react-bootstrap'
           <Form.Label>Adhar No. :</Form.Label>
           <Form.Control name="adhar" type="text" placeholder="Enter Aadhar" />
       </Form.Group>
-      <label for="covid">Covid Test:</label>
+      
+      <label htmlFor="covid">Covid Test:</label>
       <select name="covid" id="covid">
           <option value="antigen" >Antigen</option>
           <option value="rtpcr" >RT-PCR</option>
@@ -70,8 +71,7 @@ import { Button, Form, } from 'react-bootstrap'
           <Form.Control name="SpO2" type="number" placeholder="Enter the SpO2 level" />
       </Form.Group>
 
-      
-      <label for="immune">Immunization</label>
+      <label htmlFor="Immune">Immunization:</label>
       <select name="immune" id = "immune">
           <option value="dose1" >Dose-1</option>
           <option value="dose2" >Dose-2</option>
