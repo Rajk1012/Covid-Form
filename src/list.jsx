@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css'
 import { directive } from "lit-html"
-import Form from './form'
+import Registration from './form'
 import home from "./home"
 import { BrowserRouter,Route,Switch,Link} from 'react-router-dom'
 function list(){

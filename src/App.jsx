@@ -2,7 +2,7 @@ import React from 'react'
 import list from './list'
 import home from './home'
 import { BrowserRouter,Route,Switch,Link} from 'react-router-dom'
-import Form from './form'
+import Registration from './form'
 import './App.css'
 
 function App(){
@@ -23,7 +23,7 @@ function App(){
           </ul>
         </nav>
       <Switch>
-        <Route  path="/form" component={Form} />
+        <Route  path="/form" component={Registration} />
         <Route path="/home" component={home}/>
         <Route path="/list" component={list}/>
         <Route path="" component={home}/>

@@ -1,63 +1,88 @@
 import React, { useState } from 'react'
 import './App.css'
 import object from './object'
+import { Button, Form, } from 'react-bootstrap'
 
-
-  function Form() {
+  function Registration() {
     const [count, setCount] = useState(0)
     function Click(e)
   {
-    const a=e.detail;
-    console.log(a.data);
+    console.log("hello");
   } 
   return (    
-    <div className="Form">
-      <h1 class="Style2">Patient Registration Form</h1>
-      <div class="Style1" >
-      <mb-form class="flex flex-col gap-5">
-        <mb-context path="resource" value="patient"></mb-context>
-        <mb-input path="name[0].given" label="Name"></mb-input>
-        <mb-input  Label="Age" path="age"></mb-input>
-        <mb-date path="birthdate" label="Date of Birth"></mb-date>
-        <div style={{display:"flex"}} >
-          <mb-buttons type="code" label="Gender" path="gender">
-          <mb-option label="Male" value="male"></mb-option>
-          <mb-option label="Female" value="female"></mb-option>
-          <mb-option label="Other" value="other"></mb-option>
-        </mb-buttons>
-        </div>
-        <mb-input Label="Address" textarea path="address[0].text"></mb-input>
-        <div style={{display:"flex"}} >
-        <mb-buttons type="code" label="Covid Test" path="covid test">
-          <mb-option label="Antigen" value="antigen"></mb-option>
-          <mb-option label="RTPCR" value="RTPCR"></mb-option>
-          <mb-option label="None" value="none"></mb-option>
-        </mb-buttons></div>
-        <mb-input label="Symptoms" path="symptoms" color="blue"></mb-input>
-        <mb-input label="Medication" path="medication" ></mb-input>
-        <mb-input label="Cormobodities" path="cormobodities" ></mb-input>
-        <mb-input label="SpO2 Level" path="SpO2 level" ></mb-input>
-        <mb-input label="Allergic To" path="allergy"></mb-input>
-        <mb-input label="Aadhar No." path="identifier[0].value"></mb-input>
-        <mb-input path="telecome[0].value" label="Phone No."></mb-input>
-       
-        <div style={{display:"flex"}} >
-        <mb-buttons label="Immunization" type="code" path="Immunization" data={{
-            code: 'dose1',
-            value: 'Dose-1',
-            terminology: 'local',
-          }}>
-          <mb-option value="dose1" label="Dose-1"></mb-option>
-          <mb-option value="dose2" label="Dose-2"></mb-option>
-          <mb-option value="none" label="None"></mb-option>
-        </mb-buttons></div>
-        
-        <mb-submit>
-           <sl-button onClick={Click} type="info">Submit</sl-button>
-         </mb-submit>
-      </mb-form>
-      </div>
-    </div>
+<div className="form">
+    <h1 class="Style2">Registration Form</h1>
+  <Form class="style1">
+      <Form.Group >
+          <Form.Label>Name:</Form.Label>
+          <Form.Control name="name" type="text" placeholder="Enter name" />
+      </Form.Group>
+
+      <Form.Group >
+          <Form.Label>Age:</Form.Label>
+          <Form.Control name="age" type="number" placeholder="Enter Age" />
+      </Form.Group>
+
+      <label for="gendre">Gender:</label>
+      <select name="gender" id="gender">
+          <option value="male" >Male</option>
+          <option value="female" >Female</option>
+          <option value="other" >Other</option>
+      </select>
+
+      <Form.Group >
+          <Form.Label>Address:</Form.Label>
+          <Form.Control name="address" as="textarea" rows={2} />
+      </Form.Group>
+      <Form.Group controlId="contact">
+          <Form.Label>Contact No. :</Form.Label>
+          <Form.Control name="contact" type="text" placeholder="Enter Number" />
+      </Form.Group>
+
+      <Form.Group controlId="adhar">
+          <Form.Label>Adhar No. :</Form.Label>
+          <Form.Control name="adhar" type="text" placeholder="Enter Aadhar" />
+      </Form.Group>
+      <label for="covid">Covid Test:</label>
+      <select name="covid" id="covid">
+          <option value="antigen" >Antigen</option>
+          <option value="rtpcr" >RT-PCR</option>
+          <option value="none" >None</option>
+      </select>
+      <Form.Group >
+          <Form.Label>Symptoms:</Form.Label>
+          <Form.Control name="symptoms" as="textarea" rows={2} />
+      </Form.Group>
+      <Form.Group >
+          <Form.Label>Medication:</Form.Label>
+          <Form.Control name="medication" as="textarea" rows={2} />
+      </Form.Group>
+      <Form.Group >
+          <Form.Label>Cormobodities:</Form.Label>
+          <Form.Control name="cormobodities" as="textarea" rows={2} />
+      </Form.Group>
+      <Form.Group >
+          <Form.Label>Allergic to:</Form.Label>
+          <Form.Control name="allergy" as="textarea" rows={2} />
+      </Form.Group>
+      <Form.Group >
+      <Form.Label>SpO2 level:</Form.Label>
+          <Form.Control name="SpO2" type="number" placeholder="Enter the SpO2 level" />
+      </Form.Group>
+
+      
+      <label for="immune">Immunization</label>
+      <select name="immune" id = "immune">
+          <option value="dose1" >Dose-1</option>
+          <option value="dose2" >Dose-2</option>
+          <option value="none" >None</option>
+      </select>
+
+      <br></br>
+      <Button variant="primary" type="submit" onClick={Click}>Submit</Button>
+  </Form>
+</div>
   )
 }
-export default Form
+
+export default Registration
