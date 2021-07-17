@@ -1,33 +1,51 @@
 import React from 'react'
-import list from './list'
-import home from './home'
+import home from './components/home/home'
 import { BrowserRouter,Route,Switch,Link} from 'react-router-dom'
-import Registration from './form'
+import Registration from './components/form/form'
+import { Button } from 'react-bootstrap'
+import Info from "./components/getinfo/getinfo"
 import './App.css'
-
 function App(){
   return(
     <>
     <BrowserRouter> 
-    <nav>
+    <nav style={{
+          position: "sticky",
+          top: "0",
+          zIndex: "1020"
+    }}>
           <ul>
             <li>
-              <Link to="/form" class="link">Registration Form</Link>
-              </li>
-            <li>
-              <Link to="/list" class="link">Patients</Link>
+              <Link to="/">
+                <Button variant="light" style={{fontSize:"1.2rem"}}>
+                  Home
+                </Button>
+              </Link>
             </li>
             <li>
-              <Link to="/home" class="link">Home</Link>
+              <Link to="/form">
+                <Button variant="light" style={{fontSize:"1.2rem"}}>
+                  Registration Form
+                </Button>
+              </Link>
+              </li>
+            <li>
+              <Link to="/info">
+                <Button variant="light" style={{fontSize:"1.2rem"}}>
+                  Patients
+                </Button>
+              </Link>
             </li>
           </ul>
         </nav>
+      <div className="container">
       <Switch>
         <Route  path="/form" component={Registration} />
         <Route path="/home" component={home}/>
-        <Route path="/list" component={list}/>
-        <Route path="" component={home}/>
-      </Switch>             
+        <Route path="/info" component={Info}/>
+        <Route path="/" component={home}/>
+      </Switch>  
+      </div>                
     </BrowserRouter>
    </>
   )
